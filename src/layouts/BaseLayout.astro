@@ -1,4 +1,6 @@
 ---
+const brandName = "grove";
+
 // グローバルレイアウトPC
 import WosHeadPC from "./global/WOSHeadPC.astro";
 import WosHeaderPC from "./global/WOSHeaderPC.astro";
@@ -10,17 +12,19 @@ import WosHeaderSP from "./global/WOSHeaderSP.astro";
 import WosFooterSP from "./global/WOSFooterSP.astro";
 
 // ブランドコンポーネントPC
-import BrandHeadPC from "../components/brand/hirokohayashi/HeadPC.astro";
-import BrandHeaderPC from "../components/brand/hirokohayashi/HeaderPC.astro";
-import BrandFooterPC from "../components/brand/hirokohayashi/FooterPC.astro";
+// 詳細のパスは tsconfig.json
+import BrandHeadPC from "@BrandComponents/HeadPC.astro";
+import BrandHeaderPC from "@BrandComponents/HeaderPC.astro";
+import BrandFooterPC from "@BrandComponents/FooterPC.astro";
 
 // ブランドコンポーネントSP
-import BrandHeadSP from "../components/brand/hirokohayashi/HeadSP.astro";
-import BrandHeaderSP from "../components/brand/hirokohayashi/HeaderSP.astro";
-import BrandFooterSP from "../components/brand/hirokohayashi/FooterSP.astro";
+// 詳細のパスは tsconfig.json
+import BrandHeadSP from "@BrandComponents/HeadSP.astro";
+import BrandHeaderSP from "@BrandComponents/HeaderSP.astro";
+import BrandFooterSP from "@BrandComponents/FooterSP.astro";
 
 const pageTitle =
-  "【公式】HIROKO HAYASHI（ヒロコハヤシ）の通販 | ワールド オンラインストア | WORLD ONLINE STORE";
+  "grove | ワールド オンラインストア | WORLD ONLINE STORE";
 
 import { useUserAgent } from "astro-useragent";
 const uaString = Astro.request.headers.get("user-agent");
@@ -35,12 +39,12 @@ const { breadcrumb } = Astro.props;
     isMobile ? (
       <WosHeadSP pageTitle={pageTitle}>
         <BrandHeadSP />
-        <link rel="stylesheet" href="/css/sp.css" />
+        <link rel="stylesheet" href={`/css/brand/${brandName}/sp.css`} />
       </WosHeadSP>
     ) : (
       <WosHeadPC pageTitle={pageTitle}>
         <BrandHeadPC />
-        <link rel="stylesheet" href="/css/pc.css" />
+        <link rel="stylesheet" href={`/css/brand/${brandName}/pc.css`} />
       </WosHeadPC>
     )
   }
