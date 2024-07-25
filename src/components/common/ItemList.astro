@@ -1,0 +1,21 @@
+---
+import ItemPC from "./ItemPC.astro";
+import ItemSP from "./ItemSP.astro";
+
+import { useUserAgent } from "astro-useragent";
+const uaString = Astro.request.headers.get("user-agent");
+const { source, isMobile } = useUserAgent(uaString);
+
+const { items } = Astro.props;
+---
+
+<div class="list_search-result">
+  {
+    isMobile
+      ? items.map((item) => <ItemSP {...item} />)
+      : items.map((item) => <ItemPC {...item} />)
+  }
+</div>
+
+<!-- is:globalを指定すること -->
+<style lang="scss" is:global></style>

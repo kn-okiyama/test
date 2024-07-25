@@ -1,0 +1,10 @@
+div.list_search-result.item_3 .block_item .block_campaign2 em {
+  width: max-content !important;
+}
+
+.block_item .block_campaign2 em {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: max-content !important;
+  margin: 5px 0 0 !important;
+}

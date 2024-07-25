@@ -1,0 +1,19 @@
+img {
+  max-inline-size: 100%;
+}
+
+.is-pc {
+  display: none;
+
+  @include lg() {
+    display: block;
+  }
+}
+
+.is-sp {
+  display: block;
+
+  @include lg() {
+    display: none;
+  }
+}

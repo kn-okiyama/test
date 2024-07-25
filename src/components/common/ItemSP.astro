@@ -1,0 +1,71 @@
+---
+const { ranking=false, sara10=false, newst=false, point10=false, sale=false, summary=false } = Astro.props;
+const sara10Class = sara10 ? 'sara10_timesale' : '';
+const point10Class = point10 ? 'point10' : '';
+---
+
+<div class="block_item" class:list={[sara10Class, point10Class]} data-bic="BR12724F0234">
+  <span class="block_campaign" style="display: none;"></span>
+  <div class="wrap_icon">
+    {newst && <span class="icon_new">NEW</span>}
+  </div>
+  {ranking && <div class="ranking_icon" />}
+  <div>
+    <a href="https://store.world.co.jp/brand/indivi/item/BR12724F0234?wid=12789022">
+      <span class="wrap_img">
+        <p class="icon_topright"></p>
+        <img src="https://store.world.co.jp/img/item/BR127/BR12724F0234/BR12724F0234_l1_c103.jpg" alt="インディヴィ(INDIVI)の【洗える／UVケア／SETUP可能】バックシャンブラウス" width="100%" />
+      </span>
+
+      <div class="wrap_description">
+        <div class="txt_brand-name">INDIVI</div>
+        <p class="txt_item-name">【洗える／UVケア／SETUP可能】バックシャンブラウス</p>
+
+        <p class="txt_price">
+          {
+            sale ? (
+              <em class="txt_sale-price">¥12,980</em>
+              <em class="txt_sale-rate">50%OFF</em>
+            ) : (
+              "¥12,980"
+            )
+          }
+        </p>
+
+        <!-- <p class="txt_magazine" m:id="IF:ITEM_HAS_MEDIA"><span m:id="W:ITEM_NEWEST_MEDIA_NAME">雑誌名</span>掲載</p> -->
+      </div>
+    </a>
+  </div>
+
+  {
+    summary && ( 
+      <div data-item-id="WOSBR70924S0032" class="zv-summary" data-site-id="e875613b-e28d-4b6e-bfe5-54bfcc2704ac" data-questionnaire-id="114" data-item-unit="item_group_id">
+        <span>    
+          <svg viewBox="0 0 576 512" class="zv-star-svg"><use xlink:href="#zv-star-svg"></use></svg>
+          <svg viewBox="0 0 576 512" class="zv-star-svg"><use xlink:href="#zv-star-svg"></use></svg>
+          <svg viewBox="0 0 576 512" class="zv-star-svg"><use xlink:href="#zv-star-svg"></use></svg>
+          <svg viewBox="0 0 576 512" class="zv-star-svg"><use xlink:href="#zv-star-svg"></use></svg>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="18" class="zv-star-svg">
+          <defs>
+            <pattern id="WOSBR70924S0032" x="0" y="0" width="100%" height="100%">
+              <rect x="0" y="0" width="100%" height="100%" class="zv-star-svg-grey"></rect>
+              <rect x="0" y="0" width="100%" height="100%" class="zv-star-svg-main"></rect>
+            </pattern>
+          </defs>
+            <path fill="url(#WOSBR70924S0032)" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" transform=""></path>
+          </svg>     
+        </span>
+        <span class="zv-star-comment">5.0  (1件)</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" display="none" class="zv-star-svg-sub">
+          <symbol viewBox="0 0 576 512" id="zv-star-svg">
+          <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" transform=""></path>
+          </symbol>
+        </svg>
+      </div>  
+    )
+  }
+
+  <span class="block_campaign2">
+    {sara10 && <em class="sara10_timesale">さらに10%OFF</em>}    
+  </span>
+</div>

@@ -1,0 +1,179 @@
+.link_live-shopping {
+  position: absolute;
+  font-size: 16px;
+  color: #ff0000 !important;
+  font-weight: bold;
+  top: 26px;
+  left: 740px;
+  letter-spacing: 0.05em;
+}
+
+.link_live-shopping:before {
+  content: '';
+  background: url(https://store.world.co.jp/s/live-shopping/img/ico_liveshopping.png) no-repeat;
+  background-size: contain;
+  display: inline-table;
+  width: 25px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.store-cart_try-on_exe {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
+  border-radius: 59%;
+  background: red;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  /* right: 0px; */
+  margin: 3px 7px;
+}
+
+#chatplusview {
+  position: fixed;
+  top: auto;
+  left: 25px !important;
+  right: auto !important;
+  bottom: 25px !important;
+  z-index: 10000 !important;
+  transform: translate3d(0, 0, 1px);
+}
+
+#chatplusview.closed #outline #eye_catcher.eyecatcher-close_chat {
+  left: -10px !important;
+  bottom: -15px !important;
+}
+
+#chatplusview.closed.headless #outline #eye_catcher.eyecatcher-in_chat {
+  left: -10px !important;
+  bottom: -15px !important;
+}
+
+.bt_chat_plus a {
+  padding: 10px 25px 0px 20px;
+  border: 1px solid #555;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 15px;
+  position: static !important;
+  right: 0;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  top: 7px;
+  height: 43px;
+  display: inline-block;
+}
+
+.bt_chat_plus a::before {
+  background: url(/res/s/detail/img/ico_chat.png) center center no-repeat;
+  width: 32px;
+  height: 35px;
+  background-size: contain;
+  content: '';
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+#chatplusview.chatplusview-modern.closed.float #outline #eye_catcher {
+  bottom: 0;
+}
+
+#chatplusview .cpfar::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 200;
+}
+
+#chatplusview .cpfas::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 100;
+}
+
+#chatplusview nlbr {
+  font: inherit;
+  color: inherit;
+  line-height: 2;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+#chatplusview #eye_catcher #chatplusbadge {
+  top: 0px;
+  left: 5px !important;
+  right: auto;
+}
+
+#chatplusview #chatplusbadge {
+  position: absolute;
+  z-index: 101;
+  padding: 0 0.5em;
+  border-radius: 50%;
+  color: #fff;
+  background-color: red;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.8;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+#chatplusview #eye_catcher:not(.eyecatcher-imagemap) img {
+  display: none;
+}
+
+#navigation .nav-menu__item a.bt_chat_plus2 {
+  margin: 0 0 50px 0;
+}
+
+#navigation .nav-menu__item a.bt_chat_plus2 {
+  border: 1px solid #aaa;
+  padding: 16px 0px 16px 48px;
+  display: inline-block;
+  margin: 25px 20px 50px;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+#navigation .nav-menu__item a.bt_chat_plus2 span {
+  font-size: 12px;
+  color: #666;
+  padding: 0 0 0 0px;
+  letter-spacing: 0.05em;
+}
+
+#navigation .nav-menu__item a.bt_chat_plus2::before {
+  background: url(/res/s/detail/img/ico_chat.png?ver=3) center center no-repeat;
+  width: 26px;
+  height: 26px;
+  background-size: contain;
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  margin: -13px 0 0 0;
+  left: 13px;
+}
+
+#navigation .nav-menu__item a.bt_chat_plus2::after {
+  top: 50%;
+  right: 13px;
+  margin: -7px 0 0 0;
+  width: 10px;
+  height: 10px;
+}
+
+#chatplusview #eye_catcher .button-hide {
+  right: 200px;
+}

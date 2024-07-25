@@ -1,0 +1,24 @@
+@mixin sp() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// デザインスケール 375px
+@function vw($px) {
+  @return calc(#{$px} * (100vw / 375));
+}
+
+@mixin font-lato() {
+  font-family: "lato", serif;
+}
+
+@mixin font-garamond() {
+  font-family: "Cormorant Garamond", serif;
+}

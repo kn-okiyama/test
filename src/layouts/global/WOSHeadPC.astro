@@ -1,0 +1,70 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <title>{pageTitle}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link href="https://store.world.co.jp/res/p/common/css/common.css?20240302" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/res/p/common/css/layout.css?202404090600" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/res/p/common/css/online_common.css?202404090600" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/res/p/common/css/online_recommend.css?202404090600" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/res/p/common/css/webshop.css?202404090600" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/res/p/common/css/renew_head.css?202404090600" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+  <link href="https://store.world.co.jp/universal/p/res/css/headfoot.css?202404090600" rel="stylesheet" type="text/css" />
+  <script src="https://store.world.co.jp/universal/p/res/js/jquery-1.12.4.min.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/universal/p/res/js/jquery.cookie.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/universal/p/res/js/jquery-ui.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/universal/p/res/js/underscore-min.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/efs/favorite/fav.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/efs/mail/mail.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/efs/order/cart.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/efs/order/reg.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/common/js/all.js?202404090600" type="text/javascript"></script>
+  <script type="text/javascript" src="https://store.world.co.jp/res/p/snap/js/history_module_ss.js?ver=20220216"></script>
+  <script src="https://store.world.co.jp/res/p/modernizr/modernizr-custom.min.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/store/world.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/common/js/jquery.masonry.min.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/common/js/jquery.easing.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/search/js/facet.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/search/js/facet-webshop.js?202404090600" type="text/javascript"></script>
+  <script is:inline>
+    var customerId = 'C85S190WO01171';
+    var customerStatus = '12';
+    var birthday = '19841112';
+    var sexDiv = '01';
+    var balancePoint = '0';
+    var expirePoint = '0';
+    var customerRankId = '99';
+    var customerRankName = 'ランク無し';
+    var privateRankId = '1';
+    var targetingId = '';
+    var cardId = '2401235490242';
+    var cardIssueRealStoreId = '';
+    var cardStatus = '04';
+    var deviceDiv = '02';
+    var currentDeviceDiv = '04';
+    var userAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36';
+    var trackingId = '201907171258:_sp:070_takeo,201907171507:_via:/s/brand/takeo-kikuchi/,201907171256:utm_campaign:indivi,201907171256:utm_medium:paidsearch,201907171256:utm_source:google';
+    var visitorId = 'f9b483b0-b38a-4e14-8b59-49ad4471a747';
+    var ecOrderCount = '0';
+    var totalCartCount = 10;
+    var totalStoreCartCount = 10;
+    var domainId = 'WOS';
+    var viewType = 'SMARTPHONE';
+    var imageBaseUrl = '';
+    var staticMode = false;
+  </script>
+  <script type="text/javascript" src="https://store.world.co.jp/res/p/common/js/common.js?ver=20190610"></script>
+  <script src="https://store.world.co.jp/res/p/common/js/ofi.min.js?202404090600" type="text/javascript"></script>
+  <script src="https://store.world.co.jp/res/p/common/js/axios.min.js?202404090600" type="text/javascript"></script>
+  <link href="https://cdn.voice.zetacx.net/static/zv/zv.summary_list.css" rel="stylesheet" type="text/css" />
+
+  <slot />
+
+  <link href="https://store.world.co.jp/res/p/search/css/search.css?ver=1" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://store.world.co.jp/res/p/search/js/search-page-pc.js"></script>
+</head>

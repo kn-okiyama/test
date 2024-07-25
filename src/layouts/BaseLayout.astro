@@ -1,0 +1,100 @@
+---
+// グローバルレイアウトPC
+import WosHeadPC from "./global/WOSHeadPC.astro";
+import WosHeaderPC from "./global/WOSHeaderPC.astro";
+import WosFooterPC from "./global/WOSFooterPC.astro";
+
+// グローバルレイアウトSP
+import WosHeadSP from "./global/WOSHeadSP.astro";
+import WosHeaderSP from "./global/WOSHeaderSP.astro";
+import WosFooterSP from "./global/WOSFooterSP.astro";
+
+// ブランドコンポーネントPC
+import BrandHeadPC from "../components/brand/hirokohayashi/HeadPC.astro";
+import BrandHeaderPC from "../components/brand/hirokohayashi/HeaderPC.astro";
+import BrandFooterPC from "../components/brand/hirokohayashi/FooterPC.astro";
+
+// ブランドコンポーネントSP
+import BrandHeadSP from "../components/brand/hirokohayashi/HeadSP.astro";
+import BrandHeaderSP from "../components/brand/hirokohayashi/HeaderSP.astro";
+import BrandFooterSP from "../components/brand/hirokohayashi/FooterSP.astro";
+
+const pageTitle =
+  "【公式】HIROKO HAYASHI（ヒロコハヤシ）の通販 | ワールド オンラインストア | WORLD ONLINE STORE";
+
+import { useUserAgent } from "astro-useragent";
+const uaString = Astro.request.headers.get("user-agent");
+const { source, isMobile } = useUserAgent(uaString);
+
+const { breadcrumb } = Astro.props;
+---
+
+<html>
+  {
+    // head
+    isMobile ? (
+      <WosHeadSP pageTitle={pageTitle}>
+        <BrandHeadSP />
+        <link rel="stylesheet" href="/css/sp.css" />
+      </WosHeadSP>
+    ) : (
+      <WosHeadPC pageTitle={pageTitle}>
+        <BrandHeadPC />
+        <link rel="stylesheet" href="/css/pc.css" />
+      </WosHeadPC>
+    )
+  }
+  <body>
+    <div class="container">
+      {
+        // header
+        isMobile ? (
+          <WosHeaderSP>
+            <BrandHeaderSP />
+          </WosHeaderSP>
+        ) : (
+          <WosHeaderPC>
+            <BrandHeaderPC />
+          </WosHeaderPC>
+        )
+      }
+      <div class="wrap_breadcrumb">
+        <ul class="breadcrumbs">
+          <li
+            itemscope="itemscope"
+            itemtype="http://data-vocabulary.org/Breadcrumb"
+          >
+            <a href="" itemprop="url" class="top--icon">トップ</a>
+          </li>
+          {
+            breadcrumb.map((item) => (
+              <li
+                itemscope="itemscope"
+                itemtype="http://data-vocabulary.org/Breadcrumb"
+              >
+                <a href="" itemprop="url">
+                  {item}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="contents-area clearfix">
+        <slot />
+      </div>
+      {
+        // footer
+        isMobile ? (
+          <WosFooterSP>
+            <BrandFooterSP />
+          </WosFooterSP>
+        ) : (
+          <WosFooterPC>
+            <BrandFooterPC />
+          </WosFooterPC>
+        )
+      }
+    </div>
+  </body>
+</html>
